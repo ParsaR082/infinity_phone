@@ -10,17 +10,19 @@
 
 :root {
   --font-base: 'Vazirmatn', system-ui, -apple-system, sans-serif;
-  --bg-dark: #08080a;
-  --bg-card: #121217;
-  --bg-card-hover: #191921;
-  --bg-elevated: #20202a;
+  --bg-dark: #060913;
+  --bg-surface: #0a0f1d;
+  --bg-card: #0f172a;
+  --bg-card-hover: #16223b;
+  --bg-elevated: #1c2a47;
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-focus: rgba(0, 245, 155, 0.4);
-  --text-main: #f5f5f7;
-  --text-muted: #8e8e99;
-  --accent: #00f59b;
-  --accent-hover: #00dc8b;
-  --accent-glow: rgba(0, 245, 155, 0.25);
+  --border-focus: rgba(255, 107, 0, 0.45);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent: #ff6b00;
+  --accent-cyan: #38bdf8;
+  --accent-hover: #ff8522;
+  --accent-glow: rgba(255, 107, 0, 0.4);
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
@@ -266,7 +268,7 @@ img {
 
 .pdetail__main-img-box {
   position: relative;
-  background: radial-gradient(circle at center, #1b1c24 0%, #0d0e12 100%);
+  background: radial-gradient(circle at center, #16223b 0%, #090e1b 100%);
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
   padding: 40px;
@@ -516,7 +518,7 @@ img {
 
 .storage-btn.is-active {
   border-color: var(--accent);
-  background: rgba(0, 245, 155, 0.08);
+  background: rgba(255, 107, 0, 0.12);
   color: var(--accent);
   font-weight: 700;
 }
@@ -704,14 +706,14 @@ img {
 }
 
 .product-card:hover {
-  border-color: rgba(0, 245, 155, 0.3);
+  border-color: rgba(255, 107, 0, 0.4);
   transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 107, 0, 0.12);
 }
 
 .product-card__thumb-link {
   position: relative;
-  background: radial-gradient(circle at center, #1b1c24 0%, #0e0f14 100%);
+  background: radial-gradient(circle at center, #16223b 0%, #090e1b 100%);
   padding: 32px 24px;
   display: flex;
   align-items: center;

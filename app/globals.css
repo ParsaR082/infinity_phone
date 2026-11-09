@@ -22,11 +22,26 @@ html {
   --font-base: 'Vazirmatn', system-ui, -apple-system, sans-serif;
   --font-body: 'Vazirmatn', system-ui, -apple-system, sans-serif !important;
   --font-heading: 'Vazirmatn', 'Geist', sans-serif !important;
+
+  /* Luxury Midnight Navy & Electric Cyber Orange Palette */
+  --bg-dark: #060913;
+  --bg-surface: #0a0f1d;
+  --bg-card: #0f172a;
+  --bg-card-hover: #16223b;
+  --bg-elevated: #1c2a47;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(255, 107, 0, 0.45);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent: #ff6b00;
+  --accent-cyan: #38bdf8;
+  --accent-hover: #ff8522;
+  --accent-glow: rgba(255, 107, 0, 0.4);
 }
 
 html, body {
-  background-color: #060709;
-  color: #f5f5f7;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
   font-family: var(--font-base);
   margin: 0;
   padding: 0;
@@ -135,7 +150,7 @@ img {
 .pcard {
   position: relative;
   overflow: hidden;
-  background: #0d0f17;
+  background: #0f172a;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   display: flex;
@@ -145,13 +160,13 @@ img {
 
 .pcard:hover {
   transform: translateY(-6px);
-  border-color: rgba(0, 245, 155, 0.35);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(0, 245, 155, 0.12);
+  border-color: rgba(255, 107, 0, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(255, 107, 0, 0.16);
 }
 
 .pcard__thumb-box {
   position: relative;
-  background: #08090d !important;
+  background: #090e1b !important;
   padding: 0 !important;
   display: flex !important;
   align-items: center !important;
@@ -166,7 +181,7 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 245, 155, 0.12) 0%, transparent 72%);
+  background: radial-gradient(circle at 50% 50%, rgba(255, 107, 0, 0.12) 0%, transparent 72%);
   pointer-events: none;
   z-index: 1;
 }
@@ -178,7 +193,7 @@ img {
   right: 0;
   bottom: 0;
   height: 60px;
-  background: linear-gradient(to top, #0d0f17 0%, transparent 100%);
+  background: linear-gradient(to top, #0f172a 0%, transparent 100%);
   pointer-events: none;
   z-index: 2;
 }
@@ -207,7 +222,7 @@ img {
 
 .pcard:hover .pcard__img {
   transform: scale(1.18) translateY(-6px) !important;
-  filter: drop-shadow(0 28px 50px rgba(0, 245, 155, 0.35)) !important;
+  filter: drop-shadow(0 28px 50px rgba(255, 107, 0, 0.35)) !important;
 }
 
 .pcard__floating-actions {
@@ -221,7 +236,7 @@ img {
 }
 
 .pcard__icon-btn {
-  background: rgba(13, 15, 23, 0.72) !important;
+  background: rgba(15, 23, 42, 0.78) !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
   border: 1px solid rgba(255, 255, 255, 0.14) !important;
@@ -240,7 +255,7 @@ img {
 .pcard__icon-btn:hover {
   border-color: var(--accent) !important;
   color: var(--accent) !important;
-  background: rgba(0, 245, 155, 0.15) !important;
+  background: rgba(255, 107, 0, 0.15) !important;
   transform: scale(1.12) !important;
 }
 
@@ -254,14 +269,14 @@ img {
   position: absolute;
   top: 14px;
   right: 14px;
-  background: #00f59b !important;
-  color: #07090e !important;
+  background: linear-gradient(135deg, #ff6b00 0%, #ff8f00 100%) !important;
+  color: #070a12 !important;
   font-size: 0.72rem !important;
   font-weight: 800 !important;
   padding: 4px 10px !important;
   border-radius: 20px !important;
   z-index: 10 !important;
-  box-shadow: 0 4px 14px rgba(0, 245, 155, 0.4) !important;
+  box-shadow: 0 4px 14px rgba(255, 107, 0, 0.4) !important;
   white-space: nowrap !important;
 }
 
@@ -323,7 +338,7 @@ img {
 .pcard__price {
   font-size: 1.08rem;
   font-weight: 800;
-  color: #00f59b;
+  color: var(--accent);
 }
 
 .pcard__prev-price {
@@ -352,7 +367,7 @@ img {
   position: relative !important;
   overflow: hidden !important;
   border-radius: var(--radius-md) !important;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 245, 155, 0.12) 0%, rgba(15, 17, 23, 0.95) 75%) !important;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 107, 0, 0.12) 0%, rgba(15, 23, 42, 0.95) 75%) !important;
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -368,7 +383,7 @@ img {
 
 .fcard:hover .fcard__img {
   transform: scale(1.18) translateY(-8px) !important;
-  filter: drop-shadow(0 32px 55px rgba(0, 245, 155, 0.3)) !important;
+  filter: drop-shadow(0 32px 55px rgba(255, 107, 0, 0.35)) !important;
 }
 
 /* 12. Smooth Lazy Filtering Transitions */
@@ -405,7 +420,7 @@ img {
 /* 13. Titanium Campaign Section Layout & Imagery */
 .campaign-section {
   padding: 110px 0;
-  background: linear-gradient(180deg, #060709 0%, #0d0f14 50%, #060709 100%);
+  background: linear-gradient(180deg, #060913 0%, #0c1326 50%, #060913 100%);
   position: relative;
   overflow: hidden;
   border-top: 1px solid var(--border-subtle);
@@ -430,13 +445,13 @@ img {
 .campaign-badge {
   display: inline-block;
   align-self: flex-start;
-  background: rgba(0, 245, 155, 0.1);
+  background: rgba(255, 107, 0, 0.12);
   color: var(--accent);
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 700;
-  border: 1px solid rgba(0, 245, 155, 0.25);
+  border: 1px solid rgba(255, 107, 0, 0.3);
   letter-spacing: 0.5px;
 }
 
@@ -485,10 +500,10 @@ img {
   border-radius: 24px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 45px rgba(0, 245, 155, 0.15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 45px rgba(255, 107, 0, 0.2);
   height: 480px;
   max-height: 500px;
-  background: #0d0f14;
+  background: #090e1b;
 }
 
 .campaign-img {
@@ -507,7 +522,7 @@ img {
 /* 14. Advantages Section (Why Us) */
 .advantages-section {
   padding: 100px 0 120px;
-  background: #08090d;
+  background: #080c16;
   position: relative;
   z-index: 2;
   border-bottom: 1px solid var(--border-subtle);
@@ -534,15 +549,15 @@ img {
 
 .adcard:hover {
   transform: translateY(-6px) !important;
-  border-color: rgba(0, 245, 155, 0.4) !important;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65) !important;
+  border-color: rgba(255, 107, 0, 0.45) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65), 0 0 20px rgba(255, 107, 0, 0.12) !important;
 }
 
 .adcard__icon {
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  background: rgba(0, 245, 155, 0.1);
+  background: rgba(255, 107, 0, 0.12);
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -565,7 +580,7 @@ img {
 
 /* 15. Comprehensive Footer (pfoot) */
 .pfoot {
-  background: #050608;
+  background: #05080f;
   border-top: 1px solid var(--border-subtle);
   padding: 85px 0 32px;
   position: relative;
