@@ -673,16 +673,21 @@
     }
   };
 
+  function updateBadgeElement(el, count) {
+    if (!el) return;
+    el.textContent = window.toPersianNumber(count);
+    if (count > 0) {
+      el.style.display = 'flex';
+    } else {
+      el.style.display = 'none';
+    }
+  }
+
   // Sync badges on load
   window.addEventListener('DOMContentLoaded', () => {
-    const badge = document.getElementById('cartBadgeCount');
-    if (badge) badge.textContent = window.toPersianNumber(window.Store.getCartCount());
-
-    const wlBadge = document.getElementById('wishlistBadgeCount');
-    if (wlBadge) wlBadge.textContent = window.toPersianNumber(window.Store.getWishlistCount());
-
-    const cmpBadge = document.getElementById('compareBadgeCount');
-    if (cmpBadge) cmpBadge.textContent = window.toPersianNumber(window.Store.getCompareList().length);
+    updateBadgeElement(document.getElementById('cartBadgeCount'), window.Store.getCartCount());
+    updateBadgeElement(document.getElementById('wishlistBadgeCount'), window.Store.getWishlistCount());
+    updateBadgeElement(document.getElementById('compareBadgeCount'), window.Store.getCompareList().length);
 
     // Hook up sound toggle button
     const sndBtn = document.getElementById('snd');
@@ -694,19 +699,16 @@
   });
 
   window.addEventListener('store:cart-updated', () => {
-    const badge = document.getElementById('cartBadgeCount');
-    if (badge) badge.textContent = window.toPersianNumber(window.Store.getCartCount());
+    updateBadgeElement(document.getElementById('cartBadgeCount'), window.Store.getCartCount());
     window.Store.renderCartDrawer();
   });
 
   window.addEventListener('store:wishlist-updated', () => {
-    const wlBadge = document.getElementById('wishlistBadgeCount');
-    if (wlBadge) wlBadge.textContent = window.toPersianNumber(window.Store.getWishlistCount());
+    updateBadgeElement(document.getElementById('wishlistBadgeCount'), window.Store.getWishlistCount());
     window.Store.renderWishlistDrawer();
   });
 
   window.addEventListener('store:compare-updated', () => {
-    const cmpBadge = document.getElementById('compareBadgeCount');
-    if (cmpBadge) cmpBadge.textContent = window.toPersianNumber(window.Store.getCompareList().length);
+    updateBadgeElement(document.getElementById('compareBadgeCount'), window.Store.getCompareList().length);
   });
 })();

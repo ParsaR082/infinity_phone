@@ -597,14 +597,14 @@ export default function HomePage() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
               </svg>
-              <span id="wishlistBadgeCount" className="cart-counter">
+              <span id="wishlistBadgeCount" className="cart-counter" style={{ display: 'none' }}>
                 ۰
               </span>
             </button>
 
             <button
               type="button"
-              className="bar-icon-btn"
+              className="bar-icon-btn bar-icon-btn--compare"
               onClick={() => window.Store?.openCompare()}
               aria-label="مقایسه مشخصات گوشی‌ها"
               title="مقایسه"
@@ -616,7 +616,7 @@ export default function HomePage() {
                 <path d="M15 15l6 6" />
                 <path d="M4 4l5 5" />
               </svg>
-              <span id="compareBadgeCount" className="cart-counter">
+              <span id="compareBadgeCount" className="cart-counter" style={{ display: 'none' }}>
                 ۰
               </span>
             </button>
@@ -633,7 +633,7 @@ export default function HomePage() {
                 <circle cx="20" cy="21" r="1" />
                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
               </svg>
-              <span id="cartBadgeCount" className="cart-counter">
+              <span id="cartBadgeCount" className="cart-counter" style={{ display: 'none' }}>
                 ۰
               </span>
             </button>

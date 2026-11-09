@@ -643,9 +643,15 @@ img {
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* 16. Mobile & Responsive Layout Optimizations */
+/* 16. Mobile & Responsive Layout Optimizations (Production Mobile Polish) */
 .mobile-menu-btn {
   display: none;
+}
+
+/* Ensure empty/zero counters don't clutter the UI */
+.cart-counter:empty,
+.cart-counter.is-empty {
+  display: none !important;
 }
 
 @media (max-width: 1024px) {
@@ -655,6 +661,10 @@ img {
 }
 
 @media (max-width: 991px) {
+  /* Navigation Header */
+  .bar {
+    padding: 0 16px !important;
+  }
   .bar-nav-links {
     display: none !important;
   }
@@ -666,99 +676,386 @@ img {
     align-items: center;
     justify-content: center;
   }
-  .hero__phone-angle-img {
-    max-height: clamp(300px, 48vh, 500px) !important;
-  }
-  .hero__stage-wrap {
-    min-height: 580px !important;
-    padding: 80px 0 40px !important;
-  }
-  .campaign-section {
-    padding: 70px 0;
-  }
-  .campaign-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-  .campaign-img-box {
-    height: 320px;
-    max-height: 340px;
-  }
-  .pfoot__container {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .pfoot__links {
-    flex-wrap: wrap;
-    gap: 36px;
-  }
-  .collection-filter-bar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 16px;
-  }
-  .brand-tabs-list {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 8px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .brand-tabs-list::-webkit-scrollbar {
-    display: none;
-  }
-  .filter-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
-  }
-  .storage-filters-list {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 6px;
-  }
-  .search-box-input {
-    width: 100%;
-    min-width: 0;
-  }
-  .pcard-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 18px !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .advantages-section {
-    padding: 60px 0 70px;
-  }
-  .advantages-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .campaign-features {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .campaign-img-box {
-    height: 230px;
-  }
-  .pcard-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-  .pcard__thumb-box {
-    height: 280px !important;
-    min-height: 280px !important;
-  }
-  .pfoot__links {
-    flex-direction: column;
-    gap: 24px;
+  .brand-logo-text {
+    font-size: 1.02rem !important;
   }
   .bar-actions {
-    gap: 6px;
+    gap: 6px !important;
   }
   .bar-icon-btn {
     width: 36px !important;
     height: 36px !important;
+  }
+
+  /* CINEMATIC HERO MOBILE: Eliminate giant letter collision & clean vertical hierarchy */
+  .hero__giant-text-bg {
+    display: none !important;
+  }
+  .hero__stage-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 85px 16px 36px !important;
+    overflow: hidden !important;
+  }
+  .hero__hud-overlay {
+    position: relative !important;
+    inset: auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    pointer-events: auto !important;
+  }
+  .hud-top-coords {
+    font-size: 0.68rem !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-bottom: 14px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.5px !important;
+    width: 100% !important;
+  }
+  .hud-timeline {
+    display: none !important;
+  }
+  .hero__narrative-box {
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .hero__slogan-brand {
+    justify-content: center !important;
+    font-size: 0.88rem !important;
+    margin-bottom: 8px !important;
+  }
+  .hero__narrative-desc {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    max-width: 100% !important;
+    margin: 0 auto 16px !important;
+  }
+  .hero__phone-stage {
+    position: relative !important;
+    margin: 10px 0 24px !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .hero__phone-angle-img {
+    max-height: 260px !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+  .hero__touch-hint {
+    display: none !important;
+  }
+  .hero__cta-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+  .hero__cta-actions .btn,
+  .hero__cta-actions .hero__film-link {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 16px !important;
+    font-size: 0.92rem !important;
+  }
+  .hud-bottom-widgets {
+    margin-top: 24px !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .hud-status-badge {
+    font-size: 0.75rem !important;
+    text-align: center !important;
+    padding: 6px 12px !important;
+  }
+  .hud-brand-tag {
+    display: none !important;
+  }
+
+  /* Campaign section tablet/mobile */
+  .campaign-section {
+    padding: 60px 0 !important;
+  }
+  .campaign-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .campaign-img-box {
+    height: 280px !important;
+    max-height: 300px !important;
+  }
+
+  /* Brands section */
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  /* Tech architecture section */
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Section containers */
+  .section-container {
+    padding: 0 16px !important;
+  }
+
+  /* Universal Section Headings: Stack cleanly to avoid horizontal squeezing */
+  .section-head {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    margin-bottom: 28px !important;
+  }
+  .section-head > div {
+    width: 100% !important;
+  }
+  .section-head .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .section-title {
+    font-size: 1.55rem !important;
+    line-height: 1.35 !important;
+  }
+  .section-desc {
+    font-size: 0.88rem !important;
+    line-height: 1.65 !important;
+  }
+
+  /* SECTION 02: Featured Smartphones Track & Cards */
+  .featured-track {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .fcard {
+    padding: 20px 16px !important;
+    border-radius: 18px !important;
+  }
+  .fcard__header {
+    margin-bottom: 12px !important;
+  }
+  .fcard__img-box {
+    height: 220px !important;
+    min-height: 220px !important;
+    margin-bottom: 16px !important;
+  }
+  .fcard__img {
+    max-height: 200px !important;
+  }
+  .fcard__title {
+    font-size: 1.15rem !important;
+    margin-bottom: 4px !important;
+  }
+  .fcard__tagline {
+    font-size: 0.84rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 14px !important;
+  }
+  .fcard__footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding-top: 14px !important;
+  }
+  .fcard__price-box {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+  .fcard__price-label {
+    font-size: 0.78rem !important;
+    color: var(--text-muted) !important;
+  }
+  .fcard__price {
+    font-size: 1.18rem !important;
+    font-weight: 800 !important;
+    color: var(--accent) !important;
+    white-space: nowrap !important;
+  }
+  .fcard__actions {
+    display: grid !important;
+    grid-template-columns: 44px 1fr 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .fcard__actions .btn {
+    justify-content: center !important;
+    padding: 9px 10px !important;
+    font-size: 0.84rem !important;
+    width: 100% !important;
+  }
+
+  /* SECTION 04: Catalog Filters & Grid */
+  .filter-bar {
+    padding: 16px 14px !important;
+    border-radius: 16px !important;
+    margin-bottom: 24px !important;
+    gap: 14px !important;
+  }
+  .brand-tabs-list {
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    padding: 2px 2px 8px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+  .brand-tabs-list::-webkit-scrollbar {
+    display: none !important;
+  }
+  .brand-tab {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    padding: 7px 14px !important;
+    font-size: 0.82rem !important;
+  }
+  .search-box-input {
+    width: 100% !important;
+    min-width: 0 !important;
+    font-size: 0.86rem !important;
+    padding: 9px 12px !important;
+    border-radius: 10px !important;
+  }
+  .filter-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+  .storage-filters-list {
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+    padding-bottom: 6px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+  .storage-filters-list::-webkit-scrollbar {
+    display: none !important;
+  }
+  .storage-filter-btn {
+    flex-shrink: 0 !important;
+    padding: 4px 12px !important;
+    font-size: 0.8rem !important;
+  }
+  .sort-select {
+    width: 100% !important;
+    font-size: 0.84rem !important;
+    padding: 8px 12px !important;
+  }
+
+  /* Product Catalog Cards (Single Column on Mobile) */
+  .pcard-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  .pcard__thumb-box {
+    height: 250px !important;
+    min-height: 250px !important;
+  }
+  .pcard__body {
+    padding: 16px 14px !important;
+  }
+  .pcard__title {
+    font-size: 1.05rem !important;
+  }
+  .pcard__price {
+    font-size: 1.05rem !important;
+  }
+  .pcard__add-btn {
+    padding: 6px 14px !important;
+    font-size: 0.82rem !important;
+  }
+
+  /* Tech Grid */
+  .tech-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Header clean layout: hide compare on small phones */
+  .bar-icon-btn--compare {
+    display: none !important;
+  }
+  .brand-logo-text {
+    font-size: 0.94rem !important;
+  }
+
+  /* Brands grid */
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .bcard {
+    padding: 14px 10px !important;
+  }
+  .bcard__name {
+    font-size: 0.82rem !important;
+  }
+  .bcard__country {
+    font-size: 0.72rem !important;
+  }
+
+  /* Campaign section */
+  .campaign-img-box {
+    height: 200px !important;
+  }
+  .campaign-features {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* Advantages / Why Us Section */
+  .advantages-section {
+    padding: 50px 0 60px !important;
+  }
+  .advantages-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  .adcard {
+    padding: 20px 16px !important;
+  }
+
+  /* Footer */
+  .pfoot {
+    padding: 50px 0 24px !important;
+  }
+  .pfoot__container {
+    flex-direction: column !important;
+    gap: 30px !important;
+    margin-bottom: 30px !important;
+  }
+  .pfoot__links {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+  .pfoot__bottom {
+    font-size: 0.78rem !important;
   }
 }

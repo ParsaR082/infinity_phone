@@ -1387,19 +1387,15 @@ html[dir="rtl"] body {
 @media (max-width: 991px) {
   .hero__stage-wrap {
     height: auto;
-    min-height: 640px;
-    padding: 100px 0 60px;
+    min-height: auto;
+    padding: 85px 16px 40px;
   }
   .hero__giant-text-bg {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin-bottom: -180px;
+    display: none !important;
   }
   .hero__hud-overlay {
     position: relative;
-    padding: 40px 20px 0;
+    padding: 0;
   }
   .hud-timeline {
     display: none;
