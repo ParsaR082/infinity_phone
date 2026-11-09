@@ -1153,14 +1153,14 @@ export default function HomePage() {
                         style={{ animationDelay: `${Math.min(idx * 0.04, 0.32)}s` }}
                       >
                         <div className="pcard__thumb-box">
-                          <Link href={`/product/${p.slug}`} className="pcard__img-link">
+                          <Link href={`/product/${p.slug}`} className="pcard__thumb-link">
                             <img src={p.images[0]} alt={p.name} className="pcard__img" loading="lazy" decoding="async" />
                           </Link>
                           {p.badge && <span className="pcard__badge">{p.badge}</span>}
-                          <div className="pcard__top-actions">
+                          <div className="pcard__floating-actions">
                             <button
                               type="button"
-                              className={`pcard__action-btn ${isWl ? 'is-active' : ''}`}
+                              className={`pcard__icon-btn ${isWl ? 'is-active' : ''}`}
                               onClick={() => handleToggleWishlist(p.id)}
                               title={isWl ? 'حذف از نشان‌شده‌ها' : 'نشان کردن'}
                             >
@@ -1177,7 +1177,7 @@ export default function HomePage() {
                             </button>
                             <button
                               type="button"
-                              className={`pcard__action-btn ${isCmp ? 'is-active' : ''}`}
+                              className={`pcard__icon-btn ${isCmp ? 'is-active' : ''}`}
                               onClick={() => handleToggleCompare(p.id)}
                               title={isCmp ? 'حذف از مقایسه' : 'افزودن به مقایسه'}
                             >
@@ -1196,6 +1196,17 @@ export default function HomePage() {
                                 <path d="M4 4l5 5" />
                               </svg>
                             </button>
+                            <button
+                              type="button"
+                              className="pcard__icon-btn"
+                              onClick={() => window.Store?.openQuickView(p.id)}
+                              title="پیش‌نمایش سریع"
+                            >
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                              </svg>
+                            </button>
                           </div>
                         </div>
 
@@ -1208,35 +1219,32 @@ export default function HomePage() {
                           <h3 className="pcard__title">
                             <Link href={`/product/${p.slug}`}>{p.name}</Link>
                           </h3>
-                          <div className="pcard__name-en ltr-text">{p.nameEn}</div>
-                          <p className="pcard__desc">{p.shortDesc}</p>
+                          <div className="pcard__title-en ltr-text">{p.nameEn}</div>
 
-                          <div className="pcard__price-row">
-                            <div className="pcard__price">{formatToman(p.basePrice)}</div>
-                            {p.previousPrice && (
-                              <del className="pcard__prev-price">{formatToman(p.previousPrice)}</del>
-                            )}
+                          <div className="pcard__specs-tags">
+                            <span className="spec-tag">{p.specs.chipset.split('(')[0].trim()}</span>
+                            <span className="spec-tag">{p.specs.camera.split('+')[0].trim()}</span>
                           </div>
 
-                          <div className="pcard__actions">
+                          <div className="pcard__price-row">
+                            <div>
+                              <div className="pcard__price">{formatToman(p.basePrice)}</div>
+                              {p.previousPrice && (
+                                <del className="pcard__prev-price">{formatToman(p.previousPrice)}</del>
+                              )}
+                            </div>
                             <button
                               type="button"
-                              className="btn btn--secondary btn--sm"
-                              onClick={() => window.Store?.openQuickView(p.id)}
-                              title="پیش‌نمایش سریع"
-                            >
-                              🔍
-                            </button>
-                            <button
-                              type="button"
-                              className="btn btn--primary btn--sm btn--block"
+                              className="btn btn--primary btn--sm pcard__add-btn"
                               onClick={() => window.Store?.addToCart(p.id)}
                             >
-                              افزودن به سبد
+                              <span>خرید</span>
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <circle cx="9" cy="21" r="1" />
+                                <circle cx="20" cy="21" r="1" />
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                              </svg>
                             </button>
-                            <Link href={`/product/${p.slug}`} className="btn btn--secondary btn--sm">
-                              بررسی
-                            </Link>
                           </div>
                         </div>
                       </div>
