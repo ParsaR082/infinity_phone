@@ -1,0 +1,26 @@
+{
+  "name": "infinity-phone",
+  "version": "1.0.0",
+  "description": "فروشگاه تخصصی گوشی‌های هوشمند پرچمدار اینفینیتی فون",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "serve:node": "node server.js"
+  },
+  "keywords": [
+    "infinity-socks",
+    "threejs",
+    "webgl",
+    "gsap",
+    "lenis",
+    "clone"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

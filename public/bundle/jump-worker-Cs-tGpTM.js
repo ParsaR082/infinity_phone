@@ -1,0 +1,1 @@
+(function(){"use strict";self.onmessage=async e=>{const{i:s,url:o,opts:r}=e.data;try{const t=await fetch(o);if(!t.ok)throw new Error(String(t.status));const a=await createImageBitmap(await t.blob(),r);self.postMessage({i:s,bm:a},[a])}catch{self.postMessage({i:s,bm:null})}}})();

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Static showcase — nothing to hide. AI crawlers welcome.
+
+Sitemap: https://theinfinitysocks.com/sitemap.xml

@@ -1,0 +1,613 @@
+@import '../public/assets/css/homepage.css';
+@import '../public/assets/css/product.css';
+
+/* 1. Global Smooth Scrolling */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* 2. Completely remove skip link ("پرش به محتوای اصلی") */
+.skip, .skip__link {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  overflow: hidden !important;
+}
+
+/* 3. Base & Typography */
+:root {
+  --font-base: 'Vazirmatn', system-ui, -apple-system, sans-serif;
+  --font-body: 'Vazirmatn', system-ui, -apple-system, sans-serif !important;
+  --font-heading: 'Vazirmatn', 'Geist', sans-serif !important;
+}
+
+html, body {
+  background-color: #060709;
+  color: #f5f5f7;
+  font-family: var(--font-base);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 4. Smooth Page Fade Transitions */
+.page-smooth-enter {
+  animation: smoothPageFade 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes smoothPageFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 5. Smooth Section Scroll Reveal */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-section.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 6. Image Display & Natural Smooth Loading */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 7. Card Transitions & Fluid Hover Animations */
+.pcard {
+  animation: pcardEnter 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.25s ease !important;
+}
+
+@keyframes pcardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fcard {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.3s ease !important;
+}
+
+.bcard {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background-color 0.3s ease !important;
+}
+
+.bcard:hover {
+  transform: translateY(-4px);
+}
+
+.tcard {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+.tcard:hover {
+  transform: translateY(-4px);
+}
+
+.adcard {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease !important;
+}
+
+.adcard:hover {
+  transform: translateY(-4px);
+}
+
+/* 9. Brand & Storage Filter Buttons Transition */
+.brand-tab, .storage-filter-btn {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* 10. Drawer & Modal Smooth Backdrop Transitions */
+.drawer-overlay, .modal-overlay {
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.drawer {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.modal {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease !important;
+}
+
+/* 11. Large Atmospheric Card Background Images (Flagship Visuals) */
+.pcard {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.pcard__thumb-box {
+  position: relative;
+  background: radial-gradient(circle at 50% 45%, #242738 0%, #0a0b0e 100%) !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 310px !important;
+  min-height: 310px !important;
+  overflow: hidden !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pcard__thumb-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 245, 155, 0.16) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pcard__img-link,
+.pcard__thumb-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.pcard__img {
+  width: 95% !important;
+  height: 95% !important;
+  max-height: 295px !important;
+  object-fit: contain !important;
+  transform: scale(1.12);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease !important;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.9)) !important;
+  display: block;
+}
+
+.pcard:hover .pcard__img {
+  transform: scale(1.22) translateY(-8px) !important;
+  filter: drop-shadow(0 28px 50px rgba(0, 245, 155, 0.3)) !important;
+}
+
+.fcard__img-box {
+  min-height: 310px !important;
+  height: 310px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 24px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: var(--radius-md) !important;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 245, 155, 0.12) 0%, rgba(15, 17, 23, 0.95) 75%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.fcard__img {
+  width: 95% !important;
+  height: 95% !important;
+  max-height: 290px !important;
+  object-fit: contain !important;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease !important;
+  filter: drop-shadow(0 24px 45px rgba(0, 0, 0, 0.95)) !important;
+  transform: scale(1.08);
+}
+
+.fcard:hover .fcard__img {
+  transform: scale(1.18) translateY(-8px) !important;
+  filter: drop-shadow(0 32px 55px rgba(0, 245, 155, 0.3)) !important;
+}
+
+/* 12. Smooth Lazy Filtering Transitions */
+.pcard-grid {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.pcard-grid.is-filtering-fade {
+  opacity: 0.15;
+  transform: scale(0.985);
+  pointer-events: none;
+}
+
+.pcard-grid.is-filtering-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.pcard-enter-anim {
+  animation: pcardLazySlideIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes pcardLazySlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 13. Titanium Campaign Section Layout & Imagery */
+.campaign-section {
+  padding: 110px 0;
+  background: linear-gradient(180deg, #060709 0%, #0d0f14 50%, #060709 100%);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.campaign-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.campaign-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 2;
+  text-align: right;
+}
+
+.campaign-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(0, 245, 155, 0.1);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid rgba(0, 245, 155, 0.25);
+  letter-spacing: 0.5px;
+}
+
+.campaign-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.35;
+  color: #fff;
+  margin: 0;
+}
+
+.campaign-desc {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #a0a0ab;
+  margin: 0;
+}
+
+.campaign-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 10px 0 16px;
+}
+
+.cfeature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: #f1f1f5;
+  font-weight: 500;
+}
+
+.cfeature-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+  flex-shrink: 0;
+}
+
+.campaign-img-box {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 45px rgba(0, 245, 155, 0.15);
+  height: 480px;
+  max-height: 500px;
+  background: #0d0f14;
+}
+
+.campaign-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: block;
+}
+
+.campaign-img-box:hover .campaign-img {
+  transform: scale(1.05) !important;
+}
+
+/* 14. Advantages Section (Why Us) */
+.advantages-section {
+  padding: 100px 0 120px;
+  background: #08090d;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.adcard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+  text-align: right;
+  min-height: 220px;
+}
+
+.adcard:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(0, 245, 155, 0.4) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65) !important;
+}
+
+.adcard__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(0, 245, 155, 0.1);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adcard__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.adcard__desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* 15. Comprehensive Footer (pfoot) */
+.pfoot {
+  background: #050608;
+  border-top: 1px solid var(--border-subtle);
+  padding: 85px 0 32px;
+  position: relative;
+  z-index: 10;
+  clear: both;
+}
+
+.pfoot__container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.pfoot__brand {
+  max-width: 360px;
+  text-align: right;
+}
+
+.pfoot__logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.pfoot__desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.pfoot__links {
+  display: flex;
+  gap: 60px;
+  text-align: right;
+}
+
+.pfoot__col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pfoot__col-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.pfoot__col a {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.pfoot__col a:hover {
+  color: var(--accent);
+}
+
+.pfoot__bottom {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 24px 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* 16. Mobile & Responsive Layout Optimizations */
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .bar-nav-links {
+    display: none !important;
+  }
+  .nav-cta-btn {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero__phone-angle-img {
+    max-height: clamp(300px, 48vh, 500px) !important;
+  }
+  .hero__stage-wrap {
+    min-height: 580px !important;
+    padding: 80px 0 40px !important;
+  }
+  .campaign-section {
+    padding: 70px 0;
+  }
+  .campaign-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .campaign-img-box {
+    height: 320px;
+    max-height: 340px;
+  }
+  .pfoot__container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .pfoot__links {
+    flex-wrap: wrap;
+    gap: 36px;
+  }
+  .collection-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .brand-tabs-list {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .brand-tabs-list::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .storage-filters-list {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 6px;
+  }
+  .search-box-input {
+    width: 100%;
+    min-width: 0;
+  }
+  .pcard-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .advantages-section {
+    padding: 60px 0 70px;
+  }
+  .advantages-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .campaign-features {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .campaign-img-box {
+    height: 230px;
+  }
+  .pcard-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .pcard__thumb-box {
+    height: 280px !important;
+    min-height: 280px !important;
+  }
+  .pfoot__links {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .bar-actions {
+    gap: 6px;
+  }
+  .bar-icon-btn {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}

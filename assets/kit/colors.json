@@ -1,0 +1,1181 @@
+{
+ "source": "Tian Wai Tian catalog, Viber photos 21.08 \u2014 approximate hex, verify with distributor",
+ "colors": [
+  {
+   "code": "B001",
+   "name": "Light Natural",
+   "hex": "#DDE2EB",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "B002",
+   "name": "Light Natural",
+   "hex": "#DFE3ED",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "B663",
+   "name": "Light Natural",
+   "hex": "#E4E9F0",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "B004",
+   "name": "Light Natural",
+   "hex": "#E8ECF2",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "B005",
+   "name": "Light Natural",
+   "hex": "#D9DCDE",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "Q417",
+   "name": "Light Natural",
+   "hex": "#DFE2E3",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "B006",
+   "name": "Mid Natural",
+   "hex": "#CFD1D1",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "Q418",
+   "name": "Light Natural",
+   "hex": "#DCDDD9",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "Q666",
+   "name": "Mid Natural",
+   "hex": "#D2D2CF",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "Q009",
+   "name": "Light Natural",
+   "hex": "#E0E0DC",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "Q419",
+   "name": "Mid Natural",
+   "hex": "#C8C8C3",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "Q420",
+   "name": "Mid Natural",
+   "hex": "#CCCAC6",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "Q010",
+   "name": "Mid Natural",
+   "hex": "#C6C4C0",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "Q667",
+   "name": "Deep Natural",
+   "hex": "#A4A29F",
+   "group": 1,
+   "groupName": "Whites & Naturals"
+  },
+  {
+   "code": "Q011",
+   "name": "Light Yellow",
+   "hex": "#A5AC92",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Q015",
+   "name": "Light Yellow",
+   "hex": "#C6CB95",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Q012",
+   "name": "Light Yellow",
+   "hex": "#D3CB84",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Q016",
+   "name": "Light Yellow",
+   "hex": "#E2DC87",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Z019",
+   "name": "Light Yellow",
+   "hex": "#FCF977",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Z018",
+   "name": "Light Yellow",
+   "hex": "#EED45E",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Q013",
+   "name": "Light Yellow",
+   "hex": "#FEEB5A",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Z020",
+   "name": "Mid Yellow",
+   "hex": "#DDCA2A",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "S021",
+   "name": "Mid Yellow",
+   "hex": "#EFD72D",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Z022",
+   "name": "Mid Yellow",
+   "hex": "#D5B731",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Q014",
+   "name": "Mid Yellow",
+   "hex": "#F3C52A",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Z024",
+   "name": "Deep Yellow",
+   "hex": "#93731E",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Z241",
+   "name": "Mid Yellow",
+   "hex": "#BD9D38",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Z239",
+   "name": "Deep Yellow",
+   "hex": "#6E591F",
+   "group": 2,
+   "groupName": "Yellows"
+  },
+  {
+   "code": "Q017",
+   "name": "Light Gold",
+   "hex": "#B1A967",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z023",
+   "name": "Light Gold",
+   "hex": "#E4BA54",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z227",
+   "name": "Light Gold",
+   "hex": "#BB9551",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Q240",
+   "name": "Mid Gold",
+   "hex": "#A98843",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z026",
+   "name": "Light Gold",
+   "hex": "#D39C28",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z229",
+   "name": "Mid Gold",
+   "hex": "#A97543",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z025",
+   "name": "Light Gold",
+   "hex": "#FBA320",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z027",
+   "name": "Light Gold",
+   "hex": "#D1812B",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z042",
+   "name": "Light Gold",
+   "hex": "#D48E27",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z228",
+   "name": "Deep Gold",
+   "hex": "#865F27",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z028",
+   "name": "Deep Gold",
+   "hex": "#8D5A18",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z230",
+   "name": "Deep Gold",
+   "hex": "#643D19",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z237",
+   "name": "Deep Gold",
+   "hex": "#6B4623",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Z243",
+   "name": "Deep Gold",
+   "hex": "#664620",
+   "group": 3,
+   "groupName": "Golds & Ochres"
+  },
+  {
+   "code": "Q389",
+   "name": "Mid Pink",
+   "hex": "#B2A6BC",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q048",
+   "name": "Light Pink",
+   "hex": "#DACCD9",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q391",
+   "name": "Light Pink",
+   "hex": "#D2BCCD",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q363",
+   "name": "Light Pink",
+   "hex": "#E7D1D6",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q362",
+   "name": "Light Pink",
+   "hex": "#F2CFCF",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q518",
+   "name": "Mid Pink",
+   "hex": "#BF9EA0",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q051",
+   "name": "Light Pink",
+   "hex": "#E5B6C2",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q050",
+   "name": "Mid Pink",
+   "hex": "#DFA6B0",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q052",
+   "name": "Mid Pink",
+   "hex": "#D48D97",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q394",
+   "name": "Deep Pink",
+   "hex": "#BF8F96",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q088",
+   "name": "Deep Pink",
+   "hex": "#B68179",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q089",
+   "name": "Deep Pink",
+   "hex": "#BF7B71",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Z526",
+   "name": "Deep Pink",
+   "hex": "#B37471",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Z058",
+   "name": "Deep Pink",
+   "hex": "#BC7A78",
+   "group": 4,
+   "groupName": "Pinks"
+  },
+  {
+   "code": "Q044",
+   "name": "Light Orange",
+   "hex": "#C7BFAE",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "Q043",
+   "name": "Light Orange",
+   "hex": "#CDBCA2",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "Q226",
+   "name": "Light Orange",
+   "hex": "#C5AD8D",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "Q031",
+   "name": "Light Orange",
+   "hex": "#C3A07B",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "Q032",
+   "name": "Mid Orange",
+   "hex": "#B78D6F",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "Q030",
+   "name": "Light Orange",
+   "hex": "#D19367",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "Z036",
+   "name": "Mid Orange",
+   "hex": "#E3953D",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "Q035",
+   "name": "Light Orange",
+   "hex": "#E1904D",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "Z041",
+   "name": "Deep Orange",
+   "hex": "#964F2E",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "S040",
+   "name": "Mid Orange",
+   "hex": "#F16B20",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "S039",
+   "name": "Deep Orange",
+   "hex": "#C35F1F",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "S038",
+   "name": "Mid Orange",
+   "hex": "#E25B27",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "S094",
+   "name": "Deep Orange",
+   "hex": "#7F311E",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "S093",
+   "name": "Deep Orange",
+   "hex": "#7C3D25",
+   "group": 6,
+   "groupName": "Cream & Orange"
+  },
+  {
+   "code": "Q211",
+   "name": "Light Peach",
+   "hex": "#DDD2BF",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "Q352",
+   "name": "Light Peach",
+   "hex": "#DFC4AF",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "Q047",
+   "name": "Light Peach",
+   "hex": "#E5B9A1",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "Q365",
+   "name": "Light Peach",
+   "hex": "#C6A28F",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "Q033",
+   "name": "Light Peach",
+   "hex": "#E0A184",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "Z034",
+   "name": "Mid Peach",
+   "hex": "#CA764F",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "Z090",
+   "name": "Deep Peach",
+   "hex": "#95563E",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "Z037",
+   "name": "Mid Peach",
+   "hex": "#D26446",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "Z071",
+   "name": "Mid Peach",
+   "hex": "#D86855",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "Z091",
+   "name": "Mid Peach",
+   "hex": "#AA5F53",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "Z084",
+   "name": "Deep Peach",
+   "hex": "#7E3F33",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "S082",
+   "name": "Deep Peach",
+   "hex": "#763A2F",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "S073",
+   "name": "Deep Peach",
+   "hex": "#9F362A",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "S381",
+   "name": "Deep Peach",
+   "hex": "#B82B22",
+   "group": 5,
+   "groupName": "Peach & Rust"
+  },
+  {
+   "code": "Q222",
+   "name": "Light Berry",
+   "hex": "#A69A9C",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "Q582",
+   "name": "Light Berry",
+   "hex": "#B09B97",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "Q086",
+   "name": "Light Berry",
+   "hex": "#A78D9D",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "Q087",
+   "name": "Light Berry",
+   "hex": "#A0808D",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "Q102",
+   "name": "Light Berry",
+   "hex": "#9578BE",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "Z103",
+   "name": "Light Berry",
+   "hex": "#857298",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "Q101",
+   "name": "Mid Berry",
+   "hex": "#7E6A84",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "Z095",
+   "name": "Mid Berry",
+   "hex": "#7C5262",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "Z092",
+   "name": "Mid Berry",
+   "hex": "#774A6E",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "Z105",
+   "name": "Mid Berry",
+   "hex": "#714180",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "S107",
+   "name": "Deep Berry",
+   "hex": "#5B2C5A",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "S124",
+   "name": "Deep Berry",
+   "hex": "#362841",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "S121",
+   "name": "Deep Berry",
+   "hex": "#49354A",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "S112",
+   "name": "Deep Berry",
+   "hex": "#36244B",
+   "group": 10,
+   "groupName": "Mauve & Berry"
+  },
+  {
+   "code": "Q099",
+   "name": "Light Violet",
+   "hex": "#9C96A2",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "Q100",
+   "name": "Light Violet",
+   "hex": "#B4A0B8",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "Q113",
+   "name": "Light Violet",
+   "hex": "#AA9DC3",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "Q114",
+   "name": "Light Violet",
+   "hex": "#918BC2",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "Q524",
+   "name": "Light Violet",
+   "hex": "#968BB9",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "S409",
+   "name": "Light Violet",
+   "hex": "#8E7CBA",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "Z115",
+   "name": "Mid Violet",
+   "hex": "#70539E",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "Z120",
+   "name": "Deep Violet",
+   "hex": "#533C5D",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "S108",
+   "name": "Deep Violet",
+   "hex": "#4D1D61",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "S119",
+   "name": "Deep Violet",
+   "hex": "#3A1F62",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "S118",
+   "name": "Deep Violet",
+   "hex": "#463378",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "S116",
+   "name": "Deep Violet",
+   "hex": "#332567",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "S122",
+   "name": "Deep Violet",
+   "hex": "#20184F",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "S126",
+   "name": "Deep Violet",
+   "hex": "#211A41",
+   "group": 11,
+   "groupName": "Violets"
+  },
+  {
+   "code": "Q128",
+   "name": "Light Purple",
+   "hex": "#97A0CC",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "Z141",
+   "name": "Light Purple",
+   "hex": "#82819A",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "Z143",
+   "name": "Light Purple",
+   "hex": "#6163A9",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "Z117",
+   "name": "Mid Purple",
+   "hex": "#625972",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "S123",
+   "name": "Deep Purple",
+   "hex": "#2D253F",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "S325",
+   "name": "Deep Purple",
+   "hex": "#1E1D45",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "S148",
+   "name": "Deep Purple",
+   "hex": "#18247E",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "S414",
+   "name": "Deep Purple",
+   "hex": "#162270",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "S505",
+   "name": "Deep Purple",
+   "hex": "#10257E",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "S150",
+   "name": "Deep Purple",
+   "hex": "#1C266C",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "S149",
+   "name": "Deep Purple",
+   "hex": "#121D78",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "S359",
+   "name": "Deep Purple",
+   "hex": "#132665",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "S326",
+   "name": "Deep Purple",
+   "hex": "#111F4F",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "S486",
+   "name": "Deep Purple",
+   "hex": "#101846",
+   "group": 12,
+   "groupName": "Purple & Royal"
+  },
+  {
+   "code": "Q127",
+   "name": "Light Blue",
+   "hex": "#87A4CD",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "Q132",
+   "name": "Light Blue",
+   "hex": "#6684B0",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "Q476",
+   "name": "Light Blue",
+   "hex": "#6E95CA",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "Q129",
+   "name": "Light Blue",
+   "hex": "#6180C1",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "Z135",
+   "name": "Light Blue",
+   "hex": "#6488C8",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "Z478",
+   "name": "Light Blue",
+   "hex": "#6679A7",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "Z134",
+   "name": "Light Blue",
+   "hex": "#5F71AB",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "Z599",
+   "name": "Mid Blue",
+   "hex": "#3D6FBB",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "Z142",
+   "name": "Mid Blue",
+   "hex": "#3E5BA0",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "S145",
+   "name": "Mid Blue",
+   "hex": "#3153A6",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "S480",
+   "name": "Mid Blue",
+   "hex": "#27509F",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "S137",
+   "name": "Deep Blue",
+   "hex": "#083381",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "S139",
+   "name": "Deep Blue",
+   "hex": "#092266",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "S416",
+   "name": "Deep Blue",
+   "hex": "#1F428E",
+   "group": 13,
+   "groupName": "Cornflower Blues"
+  },
+  {
+   "code": "Q475",
+   "name": "Light Steel",
+   "hex": "#969EAC",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "Q130",
+   "name": "Light Steel",
+   "hex": "#859AAC",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "Q273",
+   "name": "Light Steel",
+   "hex": "#A2C5D2",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "Z133",
+   "name": "Light Steel",
+   "hex": "#8E97A9",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "Q131",
+   "name": "Mid Steel",
+   "hex": "#6F859C",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "Z136",
+   "name": "Light Steel",
+   "hex": "#758EB3",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "Z309",
+   "name": "Mid Steel",
+   "hex": "#5185B8",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "Z310",
+   "name": "Mid Steel",
+   "hex": "#606B86",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "Z311",
+   "name": "Mid Steel",
+   "hex": "#556484",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "Z138",
+   "name": "Deep Steel",
+   "hex": "#32416F",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "S147",
+   "name": "Deep Steel",
+   "hex": "#435581",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "S318",
+   "name": "Deep Steel",
+   "hex": "#424E7D",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "S328",
+   "name": "Deep Steel",
+   "hex": "#1E2D51",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "Z619",
+   "name": "Deep Steel",
+   "hex": "#263258",
+   "group": 14,
+   "groupName": "Steel & Denim"
+  },
+  {
+   "code": "Q158",
+   "name": "Light Navy",
+   "hex": "#CBD5D7",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "Q156",
+   "name": "Light Navy",
+   "hex": "#DDE9D9",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "Q159",
+   "name": "Light Navy",
+   "hex": "#C1D7D3",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "Q163",
+   "name": "Light Navy",
+   "hex": "#AEC9C0",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "Z164",
+   "name": "Light Navy",
+   "hex": "#92C8CD",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "Z166",
+   "name": "Mid Navy",
+   "hex": "#62A8C5",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "Z167",
+   "name": "Deep Navy",
+   "hex": "#408098",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "Z152",
+   "name": "Deep Navy",
+   "hex": "#1F76AD",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "S151",
+   "name": "Deep Navy",
+   "hex": "#1861A7",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "S153",
+   "name": "Deep Navy",
+   "hex": "#166FB6",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "S154",
+   "name": "Deep Navy",
+   "hex": "#0C6599",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "S327",
+   "name": "Deep Navy",
+   "hex": "#1A5E7E",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "S319",
+   "name": "Deep Navy",
+   "hex": "#1B3759",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  },
+  {
+   "code": "S140",
+   "name": "Deep Navy",
+   "hex": "#163453",
+   "group": 15,
+   "groupName": "Aqua & Navy"
+  }
+ ]
+}

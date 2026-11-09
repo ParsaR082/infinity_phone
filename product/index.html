@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">جزئیات گوشی هوشمند | اینفینیتی فون (Infinity Phone)</title>
+  <meta name="description" id="pageDesc" content="مشخصات فنی کامل، بررسی تخصصی و خرید جدیدترین گوشی‌های هوشمند پرچمدار با گارانتی معتبر در اینفینیتی فون">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="/assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/product.css">
+  <script src="/vendor/gsap.min.js"></script>
+  <script src="/assets/data/products.js"></script>
+  <script src="/assets/js/store.js"></script>
+</head>
+<body class="product-page">
+
+  <!-- Top Navigation Bar -->
+  <header class="pbar">
+    <div class="pbar__container">
+      <div class="pbar__right">
+        <a href="/" class="pbar__logo">
+          <span class="pbar__logo-icon">∞</span>
+          <span class="pbar__logo-text">INFINITY <span class="accent">PHONE</span></span>
+        </a>
+        <nav class="pbar__nav">
+          <a href="/#collection" class="pbar__nav-link">مجموعه گوشی‌ها</a>
+          <a href="/#brands" class="pbar__nav-link">برندها</a>
+          <a href="/#tech" class="pbar__nav-link">فناوری و نوآوری</a>
+          <a href="/faq" class="pbar__nav-link">راهنمای خرید</a>
+        </nav>
+      </div>
+
+      <div class="pbar__left">
+        <button type="button" class="pbar__action-btn" onclick="Store.openSearch()" aria-label="جستجو">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button type="button" class="pbar__action-btn pbar__cart-btn" onclick="Store.openCart()" aria-label="سبد خرید">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span id="cartBadgeCount" class="cart-badge">۰</span>
+        </button>
+        <a href="/" class="btn btn--secondary btn--sm">
+          <span>بازگشت به فروشگاه</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="pmain">
+    <div class="pmain__container">
+      
+      <!-- Breadcrumb -->
+      <nav class="pcrumb" aria-label="مسیر راهنما">
+        <a href="/">خانه</a>
+        <span>/</span>
+        <a href="/#collection">گوشی‌های هوشمند</a>
+        <span>/</span>
+        <span id="crumbBrand">برند</span>
+        <span>/</span>
+        <span id="crumbName" class="active">مدل</span>
+      </nav>
+
+      <!-- Product Section -->
+      <div id="productDetailContainer" class="pdetail">
+        <!-- Rendered by JavaScript -->
+        <div class="pdetail-loading">در حال بارگذاری اطلاعات پرچمدار...</div>
+      </div>
+
+      <!-- Full Specifications Section -->
+      <section class="pspecs">
+        <div class="pspecs__header">
+          <span class="pspecs__badge">معماری و سخت‌افزار</span>
+          <h2 class="pspecs__title">مشخصات فنی تفصیلی و مهندسی</h2>
+          <p class="pspecs__subtitle">تمام اجزای این پرچمدار با دقیق‌ترین استانداردهای بین‌المللی تحلیل و مستندسازی شده است.</p>
+        </div>
+        <div id="specsGrid" class="pspecs__grid"></div>
+      </section>
+
+      <!-- Related Products -->
+      <section class="prelated">
+        <div class="prelated__header">
+          <h3 class="prelated__title">سایر پرچمداران پیشنهادی</h3>
+          <a href="/#collection" class="prelated__all">مشاهده همه پرچمداران ←</a>
+        </div>
+        <div id="relatedGrid" class="prelated__grid"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Cart Drawer -->
+  <div id="cartDrawer" class="drawer-overlay" onclick="if(event.target===this) Store.closeCart()">
+    <div class="drawer">
+      <div class="drawer__header">
+        <div class="drawer__title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          سبد خرید شما
+        </div>
+        <button type="button" class="drawer__close" onclick="Store.closeCart()">✕</button>
+      </div>
+      <div id="cartDrawerItems" class="drawer__body"></div>
+      <div class="drawer__footer">
+        <div class="drawer__total-row">
+          <span>مبلغ قابل پرداخت:</span>
+          <strong id="cartDrawerTotal" class="drawer__total-price">۰ تومان</strong>
+        </div>
+        <button type="button" class="btn btn--primary btn--block" onclick="Store.openCheckout()">
+          ادامه جهت ثبت نهایی سفارش (Demo)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div id="searchModal" class="modal-overlay" onclick="if(event.target===this) Store.closeSearch()">
+    <div class="modal modal--search">
+      <div class="modal__header">
+        <input type="text" id="searchInput" class="search-input" placeholder="جستجوی نام مدل، برند (آیفون، سامسونگ، شیائومی، پیکسل...)" oninput="handleSearch(this.value)" />
+        <button type="button" class="modal__close" onclick="Store.closeSearch()">✕</button>
+      </div>
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal (Demo) -->
+  <div id="checkoutModal" class="modal-overlay" onclick="if(event.target===this) Store.closeCheckout()">
+    <div class="modal modal--checkout">
+      <div class="modal__header">
+        <h3 class="modal__title">تکمیل و ثبت نهایی سفارش (نمایشی)</h3>
+        <button type="button" class="modal__close" onclick="Store.closeCheckout()">✕</button>
+      </div>
+      <div id="checkoutModalBody" class="modal__body">
+        <form id="checkoutForm" onsubmit="Store.processDemoCheckout(event)">
+          <div class="checkout-form-grid">
+            <div class="form-group">
+              <label>نام و نام خانوادگی تحویل‌گیرنده</label>
+              <input type="text" required placeholder="مثال: پارسا راد" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label>شماره تماس همراه (جهت هماهنگی ارسال)</label>
+              <input type="tel" required placeholder="۰۹۱۲۳۴۵۶۷۸۹" class="form-input ltr-text" />
+            </div>
+            <div class="form-group full-width">
+              <label>نشانی کامل پستی</label>
+              <input type="text" required placeholder="تهران، خیابان ولیعصر، پلاک ..." class="form-input" />
+            </div>
+            <div class="form-group">
+              <label>شیوه تحویل و بیمه</label>
+              <select class="form-select">
+                <option>ارسال اکسپرس هوایی (بیمه ۱۰۰٪ کالا) - رایگان</option>
+                <option>پیک موتوری ویژه شهر تهران (تحویل زیر ۲ ساعت)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>نحوه پرداخت شبیه‌سازی شده</label>
+              <select class="form-select">
+                <option>درگاه بانکی شبیه‌سازی‌شده (Demo Checkout)</option>
+                <option>پرداخت امن در محل پس از تست رجیستری</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="checkout-summary-box">
+            <div class="checkout-summary-title">خلاصه اقلام فاکتور:</div>
+            <div id="checkoutItemsList"></div>
+            <div class="checkout-summary-total">
+              <span>مبلغ کل با احتساب مالیات و بیمه:</span>
+              <strong id="checkoutTotalAmount" class="accent-text">۰ تومان</strong>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block btn--lg">
+            ثبت و صدور پیش‌فاکتور رسمی (بدون کسر وجه)
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="pfoot">
+    <div class="pfoot__container">
+      <div class="pfoot__brand">
+        <div class="pfoot__logo">INFINITY <span class="accent">PHONE</span></div>
+        <p class="pfoot__desc">فروشگاه فوق مدرن تلفن‌های همراه هوشمند پرچمدار، ضمانت ۱۸ ماهه اصالت، کد رجیستری اختصاصی همتا و ارسال فوق سریع بیمه‌شده.</p>
+      </div>
+      <div class="pfoot__links">
+        <div class="pfoot__col">
+          <div class="pfoot__col-title">پرچمداران</div>
+          <a href="/product/apple-iphone-16-pro-max">آیفون ۱۶ پرو مکس</a>
+          <a href="/product/samsung-galaxy-s25-ultra">گلکسی S25 اولترا</a>
+          <a href="/product/xiaomi-15-ultra">شیائومی ۱۵ اولترا</a>
+          <a href="/product/google-pixel-9-pro-xl">پیکسل ۹ پرو XL</a>
+        </div>
+        <div class="pfoot__col">
+          <div class="pfoot__col-title">خدمات و پشتیبانی</div>
+          <a href="/faq">پرسش‌های متداول</a>
+          <a href="/terms">شرایط و قوانین ضمانت</a>
+          <a href="/privacy">حفظ حریم خصوصی</a>
+          <a href="/accessibility">دسترس‌پذیری</a>
+        </div>
+      </div>
+    </div>
+    <div class="pfoot__bottom">
+      <p>© ۲۰۲۶ اینفینیتی فون (Infinity Phone). تمامی حقوق برای این تجربه مدرن محفوظ است.</p>
+    </div>
+  </footer>
+
+  <!-- Product Detail Script -->
+  <script>
+    let currentProduct = null;
+    let selectedColor = null;
+    let selectedStorage = null;
+    let currentQty = 1;
+
+    function getSlugFromUrl() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const querySlug = urlParams.get('slug');
+      if (querySlug) return querySlug;
+
+      const pathSegments = window.location.pathname.split('/').filter(Boolean);
+      if (pathSegments[0] === 'product' && pathSegments[1]) {
+        return pathSegments[1];
+      }
+      return 'apple-iphone-16-pro-max'; // Default fallback flagship
+    }
+
+    function initProductPage() {
+      const slug = getSlugFromUrl();
+      const product = Store.getProductBySlug(slug) || Store.getProducts()[0];
+      if (!product) return;
+
+      currentProduct = product;
+      selectedColor = product.colors[0];
+      selectedStorage = product.storageVariants[0];
+      currentQty = 1;
+
+      // Update Meta Tags
+      document.title = `${product.name} | اینفینیتی فون (Infinity Phone)`;
+      const descEl = document.getElementById('pageDesc');
+      if (descEl) descEl.content = product.shortDesc;
+
+      // Update Breadcrumbs
+      document.getElementById('crumbBrand').textContent = product.brandName;
+      document.getElementById('crumbName').textContent = product.name;
+
+      // Render Product Main Card
+      renderProductCard(product);
+
+      // Render Specifications
+      renderSpecsGrid(product);
+
+      // Render Related
+      renderRelatedGrid(product);
+
+      // GSAP Entrance Animations
+      if (typeof gsap !== 'undefined') {
+        gsap.from('.pdetail__gallery', { opacity: 0, x: 40, duration: 0.9, ease: 'power2.out' });
+        gsap.from('.pdetail__content', { opacity: 0, x: -40, duration: 0.9, ease: 'power2.out' });
+        gsap.from('.pspecs__card', { opacity: 0, y: 30, stagger: 0.05, duration: 0.6, ease: 'power2.out', delay: 0.2 });
+      }
+    }
+
+    function renderProductCard(p) {
+      const container = document.getElementById('productDetailContainer');
+      const unitPrice = p.basePrice + (selectedStorage ? selectedStorage.priceDiff : 0);
+
+      container.innerHTML = `
+        <div class="pdetail__grid">
+          
+          <!-- Gallery Column -->
+          <div class="pdetail__gallery">
+            <div class="pdetail__main-img-box">
+              <img id="mainProductImg" src="${p.images[0]}" alt="${p.name}" class="pdetail__main-img" />
+              ${p.badge ? `<span class="pdetail__badge">${p.badge}</span>` : ''}
+              <button type="button" class="pdetail__wl-btn ${Store.isInWishlist(p.id) ? 'is-active' : ''}" onclick="toggleWl('${p.id}', this)" aria-label="علاقه‌مندی">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="${Store.isInWishlist(p.id) ? '#ff4b4b' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="pdetail__thumb-strip">
+              ${p.images.map((img, idx) => `
+                <button type="button" class="pdetail__thumb-btn ${idx === 0 ? 'is-active' : ''}" onclick="switchImg('${img}', this)">
+                  <img src="${img}" alt="${p.name} - زاویه ${idx + 1}" />
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Product Info Column -->
+          <div class="pdetail__content">
+            <div class="pdetail__brand-tag">
+              <img src="/assets/images/brands/${p.brand}.svg" alt="${p.brandName}" class="pdetail__brand-logo" />
+              <span>${p.brandName}</span>
+            </div>
+
+            <h1 class="pdetail__title">${p.name}</h1>
+            <div class="pdetail__name-en ltr-text">${p.nameEn}</div>
+
+            <div class="pdetail__rating-row">
+              <div class="stars">★★★★★</div>
+              <span class="rating-num">${window.toPersianNumber(p.rating)}</span>
+              <span class="reviews-count">(${window.toPersianNumber(p.reviewsCount)} دیدگاه خریداران)</span>
+              <span class="stock-status in-stock">● موجود در انبار (تحویل فوری)</span>
+            </div>
+
+            <p class="pdetail__lead">${p.shortDesc}</p>
+
+            <!-- Price Box -->
+            <div class="pdetail__price-box">
+              <div class="price-current" id="productPriceDisplay">${window.formatToman(unitPrice)}</div>
+              ${p.previousPrice ? `
+                <div class="price-prev">
+                  <del>${window.formatToman(p.previousPrice + (selectedStorage ? selectedStorage.priceDiff : 0))}</del>
+                  <span class="discount-pill">${window.toPersianNumber(p.discountPercent)}٪ تخفیف</span>
+                </div>
+              ` : ''}
+            </div>
+
+            <!-- Color Selection -->
+            <div class="option-block">
+              <div class="option-block__title">انتخاب رنگ: <strong id="selectedColorName">${selectedColor.name}</strong></div>
+              <div class="color-picker-row">
+                ${p.colors.map(c => `
+                  <button type="button" class="color-btn ${c.id === selectedColor.id ? 'is-active' : ''}" style="--swatch:${c.hex}" onclick="pickColor('${c.id}', this)" title="${c.name}"></button>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Storage Selection -->
+            <div class="option-block">
+              <div class="option-block__title">ظرفیت حافظه داخلی:</div>
+              <div class="storage-picker-row">
+                ${p.storageVariants.map(s => `
+                  <button type="button" class="storage-btn ${s.size === selectedStorage.size ? 'is-active' : ''}" onclick="pickStorage('${s.size}', this)">
+                    <span class="storage-size ltr-text">${s.size}</span>
+                    ${s.priceDiff > 0 ? `<span class="storage-diff">+${window.toPersianNumber(Math.round(s.priceDiff / 1000000))} م.ت</span>` : ''}
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Add to Cart Row -->
+            <div class="pdetail__actions">
+              <div class="qty-stepper qty-stepper--lg">
+                <button type="button" class="qty-btn" onclick="updateDetailQty(-1)">-</button>
+                <span class="qty-val" id="detailQtyDisplay">${window.toPersianNumber(currentQty)}</span>
+                <button type="button" class="qty-btn" onclick="updateDetailQty(1)">+</button>
+              </div>
+              <button type="button" class="btn btn--primary btn--lg btn--add" onclick="handleAddToCart()">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                <span>افزودن به سبد خرید</span>
+              </button>
+            </div>
+
+            <!-- Value Guarantees -->
+            <div class="pdetail__badges-strip">
+              <div class="guarantee-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00f59b" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>گارانتی ۱۸ ماهه رسمی و معتبر</span>
+              </div>
+              <div class="guarantee-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00f59b" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                <span>ارسال اکسپرس و بیمه‌شده</span>
+              </div>
+              <div class="guarantee-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00f59b" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                <span>۷ روز مهلت تعویض و تست سلامت</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      `;
+    }
+
+    function switchImg(src, btn) {
+      document.querySelectorAll('.pdetail__thumb-btn').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      const mainImg = document.getElementById('mainProductImg');
+      if (mainImg) {
+        mainImg.style.opacity = '0.3';
+        setTimeout(() => {
+          mainImg.src = src;
+          mainImg.style.opacity = '1';
+        }, 150);
+      }
+    }
+
+    function pickColor(colorId, btn) {
+      document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      selectedColor = currentProduct.colors.find(c => c.id === colorId);
+      document.getElementById('selectedColorName').textContent = selectedColor.name;
+    }
+
+    function pickStorage(size, btn) {
+      document.querySelectorAll('.storage-btn').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      selectedStorage = currentProduct.storageVariants.find(s => s.size === size);
+      
+      const newPrice = currentProduct.basePrice + selectedStorage.priceDiff;
+      document.getElementById('productPriceDisplay').textContent = window.formatToman(newPrice);
+    }
+
+    function updateDetailQty(delta) {
+      currentQty = Math.max(1, currentQty + delta);
+      document.getElementById('detailQtyDisplay').textContent = window.toPersianNumber(currentQty);
+    }
+
+    function handleAddToCart() {
+      if (!currentProduct) return;
+      Store.addToCart(currentProduct.id, selectedColor.id, selectedStorage.size, currentQty);
+    }
+
+    function toggleWl(id, btn) {
+      Store.toggleWishlist(id);
+      const isWl = Store.isInWishlist(id);
+      btn.classList.toggle('is-active', isWl);
+      btn.querySelector('svg').setAttribute('fill', isWl ? '#ff4b4b' : 'none');
+    }
+
+    function renderSpecsGrid(p) {
+      const grid = document.getElementById('specsGrid');
+      const specs = [
+        { label: 'صفحه‌نمایش', val: p.specs.screen, icon: '🖥️' },
+        { label: 'تراشه و پردازنده', val: p.specs.chipset, icon: '⚡' },
+        { label: 'سیستم دوربین اصلی', val: p.specs.camera, icon: '📷' },
+        { label: 'دوربین سلفی', val: p.specs.frontCamera, icon: '🤳' },
+        { label: 'باتری و سرعت شارژ', val: p.specs.battery, icon: '🔋' },
+        { label: 'سیستم‌عامل و هوش مصنوعی', val: p.specs.os, icon: '🧠' },
+        { label: 'جنس بدنه و شیلد', val: p.specs.material, icon: '🛡️' },
+        { label: 'وزن و ارگونومی', val: p.specs.weight, icon: '⚖️' },
+        { label: 'اتصالات و شبکه', val: p.specs.connectivity, icon: '🌐' }
+      ];
+
+      grid.innerHTML = specs.map(s => `
+        <div class="pspecs__card">
+          <div class="pspecs__card-header">
+            <span class="pspecs__icon">${s.icon}</span>
+            <span class="pspecs__card-title">${s.label}</span>
+          </div>
+          <div class="pspecs__card-val">${s.val}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderRelatedGrid(current) {
+      const grid = document.getElementById('relatedGrid');
+      const related = Store.getProducts().filter(p => p.id !== current.id).slice(0, 4);
+
+      grid.innerHTML = related.map(p => `
+        <div class="product-card">
+          <a href="/product/${p.slug}" class="product-card__thumb-link">
+            <img src="${p.images[0]}" alt="${p.name}" class="product-card__img" loading="lazy" />
+            ${p.badge ? `<span class="product-card__badge">${p.badge}</span>` : ''}
+          </a>
+          <div class="product-card__body">
+            <div class="product-card__brand">${p.brandName}</div>
+            <h4 class="product-card__title"><a href="/product/${p.slug}">${p.name}</a></h4>
+            <div class="product-card__price">${window.formatToman(p.basePrice)}</div>
+            <a href="/product/${p.slug}" class="btn btn--secondary btn--block btn--sm">مشاهده و خرید</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function handleSearch(query) {
+      const resultsContainer = document.getElementById('searchResults');
+      if (!query || !query.trim()) {
+        resultsContainer.innerHTML = '<div class="search-empty">لطفاً نام مدل یا برند مورد نظرتان را تایپ کنید.</div>';
+        return;
+      }
+      const q = query.toLowerCase().trim();
+      const matches = Store.getProducts().filter(p => 
+        p.name.toLowerCase().includes(q) || 
+        p.nameEn.toLowerCase().includes(q) || 
+        p.brandName.toLowerCase().includes(q) ||
+        p.brand.toLowerCase().includes(q)
+      );
+
+      if (matches.length === 0) {
+        resultsContainer.innerHTML = '<div class="search-empty">هیچ گوشی هوشمندی مطابق با عبارت وارد شده پیدا نشد.</div>';
+        return;
+      }
+
+      resultsContainer.innerHTML = matches.map(p => `
+        <a href="/product/${p.slug}" class="search-result-item" onclick="Store.closeSearch()">
+          <img src="${p.images[0]}" alt="${p.name}" class="search-thumb" />
+          <div class="search-info">
+            <div class="search-title">${p.name} <span class="search-title-en ltr-text">(${p.nameEn})</span></div>
+            <div class="search-price">${window.formatToman(p.basePrice)}</div>
+          </div>
+        </a>
+      `).join('');
+    }
+
+    window.addEventListener('DOMContentLoaded', initProductPage);
+  </script>
+</body>
+</html>
+
