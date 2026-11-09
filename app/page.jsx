@@ -213,13 +213,13 @@ export default function HomePage() {
         });
       }
 
-      // 3. Interactive 3D Perspective Mouse Parallax (Exact original values)
+      // 3. Interactive 3D Perspective Mouse Parallax (Optimized for 60/120fps)
       let bounds = hero.getBoundingClientRect();
       const updateBounds = () => {
         bounds = hero.getBoundingClientRect();
       };
       window.addEventListener('resize', updateBounds);
-      window.addEventListener('scroll', updateBounds, { passive: true });
+      hero.addEventListener('mouseenter', updateBounds);
 
       const handleMouseMove = (e) => {
         const mouseX = e.clientX - bounds.left;
@@ -293,31 +293,6 @@ export default function HomePage() {
 
       hero.addEventListener('mousemove', handleMouseMove);
       hero.addEventListener('mouseleave', handleMouseLeave);
-
-      // Mobile Touch Parallax
-      const handleTouchMove = (e) => {
-        if (!e.touches || !e.touches[0]) return;
-        const touch = e.touches[0];
-        const mouseX = touch.clientX - bounds.left;
-        const mouseY = touch.clientY - bounds.top;
-        const normX = Math.max(-1, Math.min(1, (mouseX / bounds.width - 0.5) * 2));
-        const normY = Math.max(-1, Math.min(1, (mouseY / bounds.height - 0.5) * 2));
-
-        gsap.to(phone3d, {
-          rotateY: normX * 16,
-          rotateX: -normY * 12,
-          x: normX * 18,
-          y: normY * 14,
-          duration: 0.6,
-          ease: 'power2.out',
-          overwrite: 'auto',
-        });
-      };
-      const handleTouchEnd = () => {
-        handleMouseLeave();
-      };
-      hero.addEventListener('touchmove', handleTouchMove, { passive: true });
-      hero.addEventListener('touchend', handleTouchEnd, { passive: true });
 
       // 4. Cursor Ambient Glow Spotlight
       let glow = null;
@@ -469,11 +444,9 @@ export default function HomePage() {
         if (diamondTween) diamondTween.kill();
         triggers.forEach((tr) => tr.kill());
         window.removeEventListener('resize', updateBounds);
-        window.removeEventListener('scroll', updateBounds);
+        hero.removeEventListener('mouseenter', updateBounds);
         hero.removeEventListener('mousemove', handleMouseMove);
         hero.removeEventListener('mouseleave', handleMouseLeave);
-        hero.removeEventListener('touchmove', handleTouchMove);
-        hero.removeEventListener('touchend', handleTouchEnd);
         if (onGlowMove) {
           window.removeEventListener('mousemove', onGlowMove);
         }
@@ -695,23 +668,23 @@ export default function HomePage() {
             </div>
 
             <div className="hero__stage-wrap">
-              {/* Giant Layered Neon Cyber Typography */}
-              <div className="hero__giant-text-bg" id="heroGiantText" aria-hidden="true">
-                <div className="giant-row giant-row--top">
-                  <span className="giant-letter">E</span>
-                  <span className="giant-letter">X</span>
-                  <span className="giant-letter">P</span>
-                </div>
-                <div className="giant-row giant-row--bot">
-                  <span className="giant-letter">L</span>
-                  <span className="giant-letter">O</span>
-                  <span className="giant-letter">R</span>
-                  <span className="giant-letter">E</span>
-                </div>
-              </div>
-
               {/* 3D Angled Phone Stage in Center */}
               <div className="hero__phone-stage" id="heroPhoneStage">
+                {/* Giant Layered Neon Cyber Typography (Directly Behind Phone) */}
+                <div className="hero__giant-text-bg" id="heroGiantText" aria-hidden="true">
+                  <div className="giant-row giant-row--top">
+                    <span className="giant-letter">E</span>
+                    <span className="giant-letter">X</span>
+                    <span className="giant-letter">P</span>
+                  </div>
+                  <div className="giant-row giant-row--bot">
+                    <span className="giant-letter">L</span>
+                    <span className="giant-letter">O</span>
+                    <span className="giant-letter">R</span>
+                    <span className="giant-letter">E</span>
+                  </div>
+                </div>
+
                 <div className="hero__phone-3d-wrapper" id="heroPhone3d">
                   <img
                     src="/assets/images/hero/hero-phone-angle.png"

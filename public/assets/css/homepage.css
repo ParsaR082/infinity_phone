@@ -71,13 +71,20 @@ html {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 html[dir="rtl"] body {
   direction: rtl;
   text-align: right;
   font-family: var(--font-body);
   background: var(--bg-dark);
   color: var(--text-main);
-  overflow-x: hidden;
+  overflow-x: clip;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
 .ltr-text {
@@ -1437,7 +1444,34 @@ html[dir="rtl"] body {
     padding: 85px 16px 40px;
   }
   .hero__giant-text-bg {
-    display: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    user-select: none !important;
+  }
+  .hero__giant-text-bg .giant-letter {
+    font-size: clamp(2.5rem, 10vw, 3.8rem) !important;
+    font-weight: 900 !important;
+    line-height: 0.88 !important;
+    opacity: 0.38 !important;
+    letter-spacing: 0.1em !important;
+    text-shadow: 0 0 20px rgba(255, 107, 0, 0.45) !important;
+  }
+  .hero__giant-text-bg .giant-row--top {
+    padding: 0 16px !important;
+    margin-bottom: -6px !important;
+  }
+  .hero__giant-text-bg .giant-row--bot {
+    padding: 0 12px !important;
   }
   .hero__hud-overlay {
     position: relative;
@@ -1459,7 +1493,8 @@ html[dir="rtl"] body {
 
 @media (max-width: 768px) {
   .pcard-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
   }
   .featured-track {
     grid-template-columns: 1fr;

@@ -38,7 +38,6 @@ export default function RootLayout({ children }) {
       <body>
         <Script src="/vendor/gsap.min.js" strategy="beforeInteractive" />
         <Script src="/vendor/ScrollTrigger.min.js" strategy="beforeInteractive" />
-        <Script src="/vendor/lenis.min.js" strategy="beforeInteractive" />
         <Script src="/assets/data/products.js" strategy="beforeInteractive" />
         <Script src="/assets/js/store.js" strategy="beforeInteractive" />
 
