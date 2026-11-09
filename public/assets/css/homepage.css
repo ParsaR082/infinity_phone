@@ -26,9 +26,45 @@
   --accent-cyan: #38bdf8;
   --accent-hover: #ff8522;
   --accent-glow: rgba(255, 107, 0, 0.4);
+
+  /* Scrollbar Theme Tokens */
+  --scrollbar-track: #060913;
+  --scrollbar-thumb: #1e293b;
+  --scrollbar-thumb-hover: #ff6b00;
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 24px;
+}
+
+html {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
+/* Custom Scrollbar for WebKit / Chromium Browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+  border: 2px solid var(--scrollbar-track);
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+  box-shadow: 0 0 12px rgba(255, 107, 0, 0.45);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--scrollbar-track);
 }
 
 *, *::before, *::after {
@@ -66,11 +102,20 @@ html[dir="rtl"] body {
 }
 
 /* Navigation Bar */
+.bar {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  padding: 22px 32px 14px;
+}
+
 .bar__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
 }
 
 .brand-logo-text {

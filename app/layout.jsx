@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
       <head>
-        <meta name="theme-color" content="#08080a" />
+        <meta name="theme-color" content="#060913" />
         <link rel="preload" href="/assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/assets/fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>

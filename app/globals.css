@@ -37,6 +37,42 @@ html {
   --accent-cyan: #38bdf8;
   --accent-hover: #ff8522;
   --accent-glow: rgba(255, 107, 0, 0.4);
+
+  /* Scrollbar Theme Tokens */
+  --scrollbar-track: #060913;
+  --scrollbar-thumb: #1e293b;
+  --scrollbar-thumb-hover: #ff6b00;
+}
+
+html {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
+/* Custom Scrollbar for WebKit / Chromium Browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+  border: 2px solid var(--scrollbar-track);
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+  box-shadow: 0 0 12px rgba(255, 107, 0, 0.45);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--scrollbar-track);
 }
 
 html, body {
@@ -46,6 +82,19 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+/* Top Navigation Bar Base Spacing */
+.bar {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  padding: 22px 32px 14px;
+}
+
+.bar__inner {
+  max-width: 1360px;
+  margin: 0 auto;
 }
 
 /* 4. Smooth Page Fade Transitions */
@@ -676,9 +725,9 @@ img {
 }
 
 @media (max-width: 991px) {
-  /* Navigation Header */
+  /* Navigation Header: Add top breathing room so it is not stuck to the ceiling */
   .bar {
-    padding: 0 16px !important;
+    padding: 18px 16px 10px !important;
   }
   .bar-nav-links {
     display: none !important;
@@ -1012,7 +1061,10 @@ img {
 }
 
 @media (max-width: 640px) {
-  /* Header clean layout: hide compare on small phones */
+  /* Header clean layout: hide compare on small phones and maintain top spacing */
+  .bar {
+    padding: 16px 12px 8px !important;
+  }
   .bar-icon-btn--compare {
     display: none !important;
   }
