@@ -132,6 +132,10 @@ export default function HomePage() {
 
       if (!hero || !phone3d) return;
 
+      if (giantText) {
+        gsap.set(giantText, { xPercent: -50, yPercent: -50 });
+      }
+
       // 1. Hero Entrance Timeline (Faithful to original animations.js)
       const tl = gsap.timeline({ delay: 0.15 });
 
@@ -668,23 +672,23 @@ export default function HomePage() {
             </div>
 
             <div className="hero__stage-wrap">
+              {/* Giant Layered Neon Cyber Typography (Directly Behind Phone) */}
+              <div className="hero__giant-text-bg" id="heroGiantText" aria-hidden="true">
+                <div className="giant-row giant-row--top">
+                  <span className="giant-letter">E</span>
+                  <span className="giant-letter">X</span>
+                  <span className="giant-letter">P</span>
+                </div>
+                <div className="giant-row giant-row--bot">
+                  <span className="giant-letter">L</span>
+                  <span className="giant-letter">O</span>
+                  <span className="giant-letter">R</span>
+                  <span className="giant-letter">E</span>
+                </div>
+              </div>
+
               {/* 3D Angled Phone Stage in Center */}
               <div className="hero__phone-stage" id="heroPhoneStage">
-                {/* Giant Layered Neon Cyber Typography (Directly Behind Phone) */}
-                <div className="hero__giant-text-bg" id="heroGiantText" aria-hidden="true">
-                  <div className="giant-row giant-row--top">
-                    <span className="giant-letter">E</span>
-                    <span className="giant-letter">X</span>
-                    <span className="giant-letter">P</span>
-                  </div>
-                  <div className="giant-row giant-row--bot">
-                    <span className="giant-letter">L</span>
-                    <span className="giant-letter">O</span>
-                    <span className="giant-letter">R</span>
-                    <span className="giant-letter">E</span>
-                  </div>
-                </div>
-
                 <div className="hero__phone-3d-wrapper" id="heroPhone3d">
                   <img
                     src="/assets/images/hero/hero-phone-angle.png"
