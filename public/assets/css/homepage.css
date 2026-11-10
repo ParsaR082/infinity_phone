@@ -322,16 +322,16 @@ html[dir="rtl"] body {
 /* GIANT 3D LAYERED TYPOGRAPHY (Behind Phone) */
 .hero__giant-text-bg {
   position: absolute;
-  top: 46%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateZ(-30px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   max-width: 1400px;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none;
   user-select: none;
 }
@@ -368,6 +368,7 @@ html[dir="rtl"] body {
 /* THE 3D ANGLED SMARTPHONE STAGE */
 .hero__phone-stage {
   position: relative;
+  isolation: isolate;
   z-index: 5;
   display: flex;
   align-items: center;
@@ -376,6 +377,7 @@ html[dir="rtl"] body {
 
 .hero__phone-3d-wrapper {
   position: relative;
+  z-index: 10;
   perspective: 1200px;
   transform-style: preserve-3d;
   will-change: transform;
@@ -385,6 +387,8 @@ html[dir="rtl"] body {
 }
 
 .hero__phone-angle-img {
+  position: relative;
+  z-index: 10;
   max-height: clamp(480px, 68vh, 760px);
   width: auto;
   object-fit: contain;
@@ -1451,12 +1455,25 @@ html[dir="rtl"] body {
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
-    transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) translateZ(-30px) !important;
     width: 100% !important;
     max-width: 320px !important;
-    z-index: 1 !important;
+    z-index: 0 !important;
     pointer-events: none !important;
     user-select: none !important;
+  }
+  .hero__phone-stage {
+    position: relative !important;
+    isolation: isolate !important;
+    z-index: 5 !important;
+  }
+  .hero__phone-3d-wrapper {
+    position: relative !important;
+    z-index: 10 !important;
+  }
+  .hero__phone-angle-img {
+    position: relative !important;
+    z-index: 10 !important;
   }
   .hero__giant-text-bg .giant-letter {
     font-size: clamp(2.5rem, 10vw, 3.8rem) !important;

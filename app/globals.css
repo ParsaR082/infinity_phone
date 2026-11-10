@@ -767,10 +767,10 @@ img {
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
-    transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) translateZ(-30px) !important;
     width: 100% !important;
     max-width: 320px !important;
-    z-index: 1 !important;
+    z-index: 0 !important;
     pointer-events: none !important;
     user-select: none !important;
   }
@@ -852,12 +852,24 @@ img {
   }
   .hero__phone-stage {
     position: relative !important;
+    isolation: isolate !important;
+    z-index: 5 !important;
     margin: 10px 0 24px !important;
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
+    align-items: center !important;
+  }
+  .hero__phone-3d-wrapper {
+    position: relative !important;
+    z-index: 10 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   .hero__phone-angle-img {
+    position: relative !important;
+    z-index: 10 !important;
     max-height: 260px !important;
     width: auto !important;
     object-fit: contain !important;
